@@ -8,7 +8,7 @@ window.RAYA_INDEX = {
       "extension": "mp4",
       "size": 20907204,
       "updatedAt": "2026-11-22T13:50:12+05:45",
-      "remarks": ""
+      "remarks": "https://www.ratopati.com/story/606896/energy-minister-moves-forward-with-ppa-private-sector-which-has-been-waiting-for-years-is-dissatisfied"
     },
     {
       "path": "Files/pdf/CMS मा थुनुवा जनाउनू.pdf",
