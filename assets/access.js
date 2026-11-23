@@ -151,7 +151,18 @@
     }
     tick();
     setInterval(tick, 1000);
-    $('access-clock').addEventListener('click', () => {
+
+    const pin = $('clock-face').querySelector('.clock-pin');
+    $('access-clock').addEventListener('click', event => {
+      if (event.detail !== 0 || event.pointerType) {
+        const matrix = pin.getScreenCTM();
+        if (!matrix) return;
+
+        const point = new DOMPoint(event.clientX, event.clientY)
+          .matrixTransform(matrix.inverse());
+        if (!pin.isPointInFill(point)) return;
+      }
+
       const now = Date.now();
       unlock({startedAt:now, expiresAt:now + SIX_HOURS, lastSeenAt:now, closedAt:null});
       $('search').focus();
